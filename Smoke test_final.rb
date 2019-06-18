@@ -85,7 +85,7 @@ describe "Smoke test" do
   end
 
   context "Suggest features - Report a problem" do
-    it "clicks on the button 'Predlozi ideju - Pošalji komentar'" do
+    it "clicks on the button 'Predloži ideju - Pošalji komentar'" do
       @browser.link(href: '#/feedback').click
     end
 

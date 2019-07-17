@@ -112,16 +112,4 @@ class SearchPlace < HomePage
   def click_claim_send_button
   	claim_form_send_button.click
   end
-
-
-  
-
-
-
-
-
-
-
-
-
 end

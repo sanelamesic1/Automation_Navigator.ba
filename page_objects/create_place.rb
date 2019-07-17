@@ -2,13 +2,13 @@ require_relative "../spec/helper"
 
 class CreatePlace < HomePage
 
-	def create_button
+  def create_button
 		@browser.link(href: '#/create-place')
 	end
-	def name_field
+  def name_field
 		@browser.text_field(id: "poi_name")
-	end
-	def city_field
+  end
+  def city_field
     @browser.text_field(id: "poi_city_name")
   end
   def zip_code_field
@@ -32,7 +32,6 @@ class CreatePlace < HomePage
   def select_list
     @browser.element(xpath: ".//div[contains(@class, 'span3')]/select")
   end
-
   def working_hour_open_field
     @browser.text_field(id: "working_hours_0_0")
   end
@@ -75,19 +74,15 @@ class CreatePlace < HomePage
   def kreiraj_button
   	@browser.button(class: ["btn", "btn-success"])
   end
-
   def name_of_new_object
   	@browser.div(class: 'name')
   end
-
   def category_of_new_object 
   	@browser.div(class: 'categories')
   end
-
   def home_button 
     @browser.a(href: "#/categories")
   end
-
   def odustani_button
     @browser.button(class: ["btn", "cancel"])
   end
@@ -125,19 +120,15 @@ class CreatePlace < HomePage
   def add_description (description)
     description_field.set description
   end
-
-	def click_category_button 
+  def click_category_button 
     category_button.click
   end
   def click_select_list
-    select_list.click
-    #@browser.option(value:"'#{category}'").click  
+    select_list.click 
   end
-
   def add_new_category (category)
     @browser.option(value:"#{category}").click   
   end
-
 	def add_working_hours (open, close)
 		@browser.execute_script("arguments[0].value='#{open}';", working_hour_open_field, visible: false)
     @browser.execute_script("arguments[0].value='#{close}';", working_hour_close_field, visible: false)  
@@ -155,7 +146,6 @@ class CreatePlace < HomePage
   def add_email (email)
     @browser.execute_script("arguments[0].value='#{email}';", email_field, visible: false)
   end
-
   def add_instagram_hashtag (hashtag)
     @browser.execute_script("arguments[0].value='#{hashtag}';", instagram_hashtag_field, visible: false)
   end
@@ -176,7 +166,6 @@ class CreatePlace < HomePage
     image_button.set image 
     sleep 10
   end
-
   def add_comment (comment)
   	@browser.execute_script("arguments[0].value='#{comment}';", comment_field, visible: false)
   end
@@ -184,25 +173,20 @@ class CreatePlace < HomePage
     @browser.execute_script("arguments[0].click();",kreiraj_button, visible: false)
     sleep 3
   end
-
   def check_name_of_new_object? (object)
   	name_of_new_object.exists?
   	name_of_new_object.eql?("#{object}")
   end
-
   def check_category_of_new_object? (new_category)
   	category_of_new_object.exists?
     category_of_new_object.text.eql?("#{new_category}")
   end
-
   def click_home_button
     home_button.click
   end
-
   def click_odustani_button
     @browser.execute_script("arguments[0].click();",odustani_button, visible: false)
   end
-
   def form_closed? (browser_url)
     @browser.url.eql?("#{browser_url}")
   end

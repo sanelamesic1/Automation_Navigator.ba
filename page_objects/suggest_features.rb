@@ -2,7 +2,7 @@ require_relative "../spec/helper"
 
 class SuggestFeatures < HomePage
 
-	def suggest_features_button
+  def suggest_features_button
 		@browser.link(href: '#/feedback')
 	end
 	def name_field

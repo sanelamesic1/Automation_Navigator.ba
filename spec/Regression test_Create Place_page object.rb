@@ -4,8 +4,8 @@ describe "Create Place_Regression test" do
   let(:create_place) { @main.create_place }
 	
   working_days=["mon", "tue", "wed", "thu", "fri"]
-	
-	context "Create place" do
+
+  context "Create place" do
     it "clicks on the button 'Kreiraj objekat'"  do
      	create_place.click_create_place_button 
     end

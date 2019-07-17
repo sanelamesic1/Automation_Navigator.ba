@@ -3,25 +3,25 @@ require_relative "../spec/helper"
 class SuggestFeatures < HomePage
 
   def suggest_features_button
-		@browser.link(href: '#/feedback')
-	end
-	def name_field
-		@browser.text_field(name: "name_surname")
-	end
-	def email_field
-		@browser.text_field(placeholder: "Email")
-	end
-	def comment_field
+    @browser.link(href: '#/feedback')
+  end
+  def name_field
+    @browser.text_field(name: "name_surname")
+  end
+  def email_field
+    @browser.text_field(placeholder: "Email")
+  end
+  def comment_field
     @browser.textarea(name: "comment")
   end
   def pohvala_button
   	@browser.label(class: "green")
-	end
-	def kritika_button
-		@browser.label(class: "red")
-	end
-	def posalji_button
-		@browser.button(class: ["btn", "green-button"])
+  end
+  def kritika_button
+    @browser.label(class: "red")
+  end
+  def posalji_button
+    @browser.button(class: ["btn", "green-button"])
   end
   def send_message 
   	@browser.div(class: ["alert", "alert-success"])
@@ -58,7 +58,7 @@ class SuggestFeatures < HomePage
 	end
 	def check_suggest_send? (sendmessage)
     send_message.exists?
-   	send_message.text.eql? ("#{sendmessage}")
+    send_message.text.eql? ("#{sendmessage}")
   end
   def check_suggest_not_send?
   	send_message.nil?

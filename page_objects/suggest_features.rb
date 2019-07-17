@@ -1,7 +1,6 @@
 require_relative "../spec/helper"
 
 class SuggestFeatures < HomePage
-
   def suggest_features_button
     @browser.link(href: '#/feedback')
   end
@@ -15,7 +14,7 @@ class SuggestFeatures < HomePage
     @browser.textarea(name: "comment")
   end
   def pohvala_button
-  	@browser.label(class: "green")
+    @browser.label(class: "green")
   end
   def kritika_button
     @browser.label(class: "red")

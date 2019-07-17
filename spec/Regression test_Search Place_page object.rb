@@ -56,6 +56,7 @@ describe "Search place" do
       search_place.rate_found_place "5"
       sleep 4
     end
+    
     it "checks if location is rated" do
       before=@browser.span(class: "nmb-votes").text.split(" ")
       expect(before[0]).to eq ("16")

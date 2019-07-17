@@ -24,9 +24,11 @@ describe "Suggest features&Report a problem_Regression test" do
     it "selects one of the options : 'Pohvala' or 'Kritika'" do
       suggest_features.click_pohvala_button
     end
+
     it "clicks on the button 'Pošalji'" do
       suggest_features.click_posalji_button
     end
+    
     it "checks if message is successfully sent" do
       suggest_features.check_suggest_send? "Hvala na poruci! Potrudit ćemo se da što prije reagujemo."
     end
@@ -111,7 +113,7 @@ describe "Suggest features&Report a problem_Regression test" do
     it "clicks on the button 'Predloži ideju - Pošalji komentar'" do
       suggest_features.click_suggest_features_button
     end
-    
+
     it "clicks on the button 'Odustani'" do
       suggest_features.click_odustani_button
     end

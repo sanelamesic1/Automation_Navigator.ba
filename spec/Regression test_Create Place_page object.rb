@@ -1,10 +1,9 @@
 require 'helper'
 
 describe "Create Place_Regression test" do
-
-	let(:create_place) { @main.create_place }
+  let(:create_place) { @main.create_place }
 	
-	working_days=["mon", "tue", "wed", "thu", "fri"]
+  working_days=["mon", "tue", "wed", "thu", "fri"]
 	
 	context "Create place" do
     it "clicks on the button 'Kreiraj objekat'"  do

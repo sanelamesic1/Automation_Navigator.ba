@@ -2,7 +2,7 @@ require 'rspec'
 require 'watir'
 require 'require_all'
 
-begin 
+begin
 	require_all "./page_objects/"
 rescue
 	puts "no object found"

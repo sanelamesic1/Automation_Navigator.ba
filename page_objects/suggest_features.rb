@@ -32,7 +32,7 @@ class SuggestFeatures < HomePage
     @browser.button(class: ["btn", "grey-button"])
   end
 
-	#akcije
+  #akcije
   def click_suggest_features_button
     suggest_features_button.click
   end

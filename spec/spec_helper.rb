@@ -3,7 +3,7 @@ require 'watir'
 require 'require_all'
 
 begin
-	require_all "./page_objects/"
+  require_all "./page_objects/"
 rescue
 	puts "no object found"
 end

@@ -5,7 +5,7 @@ require 'require_all'
 begin
 	require_all "./page_objects/"
 rescue
-	puts "no object found"
+  puts "no object found"
 end
 
 RSpec.configure do |config|

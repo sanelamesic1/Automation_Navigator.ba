@@ -7,12 +7,14 @@ describe "Search place" do
     it "clicks on Facebook icon" do
       search_place.click_facebook_icon
     end
+
     it "checks if user is redirected to the website" do
       @browser.windows.last.use do
         expect(@browser.url).eql? ("https://www.facebook.com/Navigator.ba")
       end
     end
   end
+
   context "Redirecting to Twitter page by clicking on the icon" do
     it "clicks on Twitter icon" do
       search_place.click_twitter_icon
